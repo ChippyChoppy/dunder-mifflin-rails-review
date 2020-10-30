@@ -1,0 +1,14 @@
+<h1><%= @dog.name %></h1>
+<% #The Dog show page should have their name, breed, age and the list of Dunder Mifflin Employees they are connected to %>
+
+<ul>
+    <li><%= @dog.breed %></li>
+    <li><%= @dog.age %></li>
+   
+    <% @employees.each do |employee| %>
+        <li><%= employee.first_name %></li>
+    <% end %>
+</ul>
+
+
+#@employees.collect {|employee| employee.first_name}
